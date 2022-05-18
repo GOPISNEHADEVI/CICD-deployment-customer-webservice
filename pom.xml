@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.simplilearn.webservice</groupId>
-	<artifactId>phase3-spring-webservice-07-04-2022</artifactId>
+	<artifactId>ecom-webservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>phase3-spring-webservice-07-04-2022</name>
 	<description>It is a Restful webservice project</description>
