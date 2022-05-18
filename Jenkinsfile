@@ -34,7 +34,7 @@ pipeline {
             steps {
                 echo '----------------- This is a build docker image phase ----------'
                 sh '''
-                    docker image build -t customer_webservice .
+                    docker image build -t ecom-webservice .
                 '''
             }
         }
@@ -43,13 +43,13 @@ pipeline {
             steps {
                 echo '----------------- This is a docker deploment phase ----------'
                 sh '''
-                 (if  [ $(docker ps -a | grep customer_webservice | cut -d " " -f1) ]; then \
-                        echo $(docker rm -f customer_webservice); \
-                        echo "---------------- successfully removed customer_webservice ----------------"
+                 (if  [ $(docker ps -a | grep ecom-webservice | cut -d " " -f1) ]; then \
+                        echo $(docker rm -f ecom-webservice); \
+                        echo "---------------- successfully removed ecom-webservice ----------------"
                      else \
                     echo OK; \
                  fi;);
-            docker container run --restart always --name customer_webservice -p 8081:8081 -d customer_webservice
+            docker container run --restart always --name ecom-webservice -p 8081:8081 -d ecom-webservice
             '''
             }
         }
